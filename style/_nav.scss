@@ -1,0 +1,58 @@
+/* NAV BAR SECTION */
+#navButton {
+    display: none;
+}
+
+#navToggle {
+    display: none;
+}
+
+nav {
+    width: 100vw;
+    position: fixed;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    ul {
+        list-style-type: none;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                width: auto;
+                color: white;
+                text-decoration: none;
+                font-family: $fontf;
+                font-size: $fontSize;
+                text-align: center;
+                margin: 12px 25px;
+                text-shadow: 1px 1px 2px black;
+
+                &:hover {
+                    color: cyan;
+                }
+            }
+        }
+    }
+}
+
+.hamburger {
+    font-size: 1.4em;
+    color: black;
+    padding: 5px 8px;
+    display: none;
+}
+
+nav img {
+    width: 50px;
+    border-radius: 50%;
+    float: right;
+    margin: 0px 20px;
+    border: 2px solid white;
+}

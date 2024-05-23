@@ -1,0 +1,59 @@
+/* FOOTER SECTION */
+footer {
+    width: 100vw;
+    background-color: $bgcMedium;
+    box-shadow: 0px -10px 10px -3px #0000003d;
+
+    .socialMedia {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 125px;
+    }
+
+    img {
+        height: 41px;
+        padding-top: 10px;
+    }
+
+    .footeritem {
+        text-align: center;
+    }
+
+    .footeritem p {
+        margin: 10px 10px;
+        font-family: $fontf;
+    }
+}
+
+
+/* RIGHTS RESERVED */
+.rr {
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.rr p {
+    color: rgb(231, 227, 255);
+}
+
+.myname {
+    font-family: $fontf;
+    line-height: 2.5;
+    float: left;
+    margin-left: 20px;
+    font-size: $fontSize;
+}
+
+.rrsymbol {
+    float: right;
+    font-size: $fontSize;
+    font-family: sans-serif;
+    line-height: 2.5;
+    float: right;
+    margin-right: 10px;
+}
