@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
+$fontf: "REM";
+$fontSize: 1.3rem;
+$titleSize: 2rem;
+$bigTitleSize: 3.8rem;
+$bgcExtraLight: #ffffff;
+$bgcLight: #effffc;
+$bgcMedium: #86b8ac;
+$bgcDark: #069c95;
+$bgcContact: #0c2d3d;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1315px;
+    margin: 0 auto;
+}
+
+.textP {
+    font-size: $fontSize;
+    font-family: $fontf;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $fontf;
+    color: black;
+}
+
+h2 {
+    font-size: $bigTitleSize;
+}

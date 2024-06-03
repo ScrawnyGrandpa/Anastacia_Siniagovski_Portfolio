@@ -1,0 +1,48 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .justContainer {
+            background-repeat: no-repeat;
+            height: 100vh;
+            object-fit: cover;
+            display: block;
+            background-image: url(../images/night_img.png);
+        }
+
+        h1 {
+            color: #D3E10E;
+            font-size: 86px;
+        }
+
+        p {
+            color: #F9F9F9;
+        }
+
+        form {
+            margin-top: 280px;
+        }
+
+        .container input {
+            background-color: #F6F6F6;
+            border-bottom: 4px solid #D3E10E;
+            width: 418px;
+            height: 50px;
+        }
+
+        .formName {
+            margin-right: 37px;
+        }
+
+        .formEmail {
+            margin-right: 37px;
+        }
+
+        .btn {
+            background-color: #D3E10E;
+            width: 166px;
+            height: 50px;
+            font-size: 22px;
+        }

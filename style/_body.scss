@@ -1,6 +1,7 @@
 /* LANGUAGE ICONS */
 .codeLang1 {
     width: 100vw;
+    max-width: 100%;
     background-color: rgba(228, 228, 228, 0.5);
     box-shadow: 0px -10px 3px -3px #0000003d;
     backdrop-filter: blur(10px);
@@ -94,6 +95,7 @@
     .galleryItem {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 390px;
         height: auto;
         margin: 20px;
@@ -119,13 +121,13 @@
         p {
             text-align: center;
             margin: 0 auto;
+            padding: 0 20px;
             color: black;
         }
 
         .lilicons {
             margin-top: 25px;
             display: flex;
-            margin-left: 35%;
         }
 
         img[class="icons2"] {
@@ -149,6 +151,7 @@
             line-height: 2.5;
             border-radius: 20px;
             color: white;
+            box-shadow: 0 2px 5px 2px rgba(1, 25, 41, 0.377);
 
             &:hover {
                 background-color: cyan;
@@ -162,6 +165,7 @@
 /* CONTACT ME SECTION */
 .contact {
     width: 100vw;
+    max-width: 100%;
     background-image: url(../images/abstractC.png);
     background-size: cover;
     box-shadow: inset 0px 10px 10px -3px #0000003d;
@@ -219,6 +223,7 @@ form {
         font-family: $fontf;
         border: 0;
         color: black;
+        box-shadow: 0 2px 2px 2px rgba(1, 25, 41, 0.377);
 
         &:hover {
             background-color: cyan;
@@ -231,6 +236,7 @@ form {
     border-radius: 15px;
     background-color: rgba(23, 100, 87, 0.226);
     border: 5px solid rgba(4, 81, 197, 0.349);
+    /*     border-image: linear-gradient(45deg, purple, orange) 1; */
     width: 600px;
     backdrop-filter: blur(10px);
 

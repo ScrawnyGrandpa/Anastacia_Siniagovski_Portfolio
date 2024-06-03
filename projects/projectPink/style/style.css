@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-image: url(../images/ping_img.png);
+    background-repeat: no-repeat;
+}
+
+.form-holder {
+    height: 640px;
+    width: 570px;
+    background-color: #1A1A1AD4;
+    position: relative;
+    left: 13%;
+    top: 10%;
+    padding: 45px 75px;
+}
+
+h1,
+p {
+    margin: 35px 0px;
+}
+
+h1 {
+    font: normal normal 900 36px/53px Heebo;
+    color: #FFFFFF;
+}
+
+p {
+    font: normal normal normal 20px/29px Heebo;
+    color: #F9F9F9;
+}
+
+form {
+    font: normal normal bold 16px/24px Heebo;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 418px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D31C75;
+}
+
+label {
+    margin-top: 15px;
+}
+
+input[type=submit] {
+    background: #D31C75 0% 0% no-repeat padding-box;
+    width: 166px;
+    height: 50px;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #FFFFFF;
+    margin-top: 35px;
+}

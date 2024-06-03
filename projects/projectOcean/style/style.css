@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#281EFF, #2DFF8C);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1,
+h3,
+p,
+form {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font: normal normal normal 160px/231px Satisfy;
+    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 20px;
+}
+
+h3 {
+    font: normal normal normal 32px/38px Varela Round;
+    margin-bottom: 20px;
+}
+
+p {
+    font: normal normal normal 16px/20px Varela Round;
+    margin-bottom: 40px;
+}
+
+label {
+    font: normal normal normal 16px/20px Varela Round;
+}
+
+input {
+    width: 418px;
+    height: 50px;
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+}
+
+input[type=submit] {
+    font: normal normal normal 16px/20px Varela Round;
+    width: 206px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    align-self: end;
+    margin-left: 25px;
+}
+
+.nameInput {
+    display: flex;
+    flex-direction: column;
+    text-align-last: left;
+    margin-right: 37px;
+}
+
+.emailInput {
+    display: flex;
+    flex-direction: column;
+    text-align-last: left;
+}
+
+.main-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
