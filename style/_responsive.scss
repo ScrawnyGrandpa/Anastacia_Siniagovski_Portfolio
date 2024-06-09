@@ -24,6 +24,19 @@
 /* Mobile */
 @media (max-width:576px) {
 
+
+    /* NAV BAR */
+    .container {
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    nav {
+        height: 60px;
+        position: fixed;
+        border-top: 0;
+    }
+
     #navButton {
         cursor: pointer;
     }
@@ -33,32 +46,33 @@
         display: none;
     }
 
-    #siteNav ul {
+    /*     #siteNav ul {
         list-style-type: none;
-    }
+    } */
 
     #navToggle:checked+#siteNav {
         display: block;
+        padding-top: 40px;
     }
 
     #navButton {
-        display: block;
-        height: 40px;
-        background-color: rgb(186, 152, 221);
-        line-height: 2;
-        font-size: 30px;
+        position: fixed;
+        display: inline-block;
+        font-size: 40px;
         margin-left: 15px;
-    }
-
-
-    nav {
-        height: 60px;
+        margin: -20px 0 0 15px;
+        padding: 0;
+        z-index: 5;
+        color: white;
     }
 
     nav,
     nav ul li {
-        width: 100%;
-        background-color: rgb(186, 152, 221);
+        width: 100vw;
+        max-width: 100%;
+        /* background-color: $bgcDark; */
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.329);
         clear: both;
         border-bottom: 1px solid white;
     }
@@ -67,16 +81,118 @@
         display: none;
     }
 
-    nav .hamburger:hover+ul {
-        display: block;
-    }
-
     nav img {
         display: none;
     }
 
-    nav h3 {
-        display: none;
+
+    /* HERO SECTION */
+    section {
+        background-position-x: center;
+    }
+
+    .container2 {
+        height: fit-content;
+    }
+
+    .container2>h1 {
+        text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    }
+
+    .textP {
+        font-weight: 500;
+        margin: 10px 15px;
+        text-align: justify;
+    }
+
+
+    /* Coding Languages Icons */
+    .codeLang>img {
+        margin: 20px 0px;
+        height: 60px;
+    }
+
+
+    /* About Me Section */
+    #aboutme {
+        height: fit-content;
+
+        p {
+            margin: 10px 15px;
+            text-align: justify;
+        }
+    }
+
+
+    /* Gallery Section */
+    #workGallery {
+        p {
+            margin: 10px 15px;
+            text-align: justify;
+        }
+
+        .galleryItem {
+            width: 90vw;
+            height: auto;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0px 5px 20px 3px #00000030;
+            border-radius: 15px;
+
+            img[src$='_page.png'] {
+                width: 90vw;
+            }
+        }
+    }
+
+
+    /* Contact Me Section */
+    .contact {
+        background-position-x: center;
+    }
+
+    .contactPanel {
+        margin: 0 auto;
+        width: 95vw;
+        border: 5px solid rgba(21, 208, 241, 0.486);
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h2,
+        p,
+        label,
+        input,
+        textarea {
+            font-weight: 300;
+            width: 95%;
+            color: white;
+        }
+
+        input[type=submit] {
+            width: 95%;
+            color: white;
+        }
+    }
+
+
+    /* Social Media + RR Section */
+
+    footer {
+        .socialMedia {
+            height: fit-content;
+        }
+    }
+
+    .rr {
+        height: 35px;
+
+        p {
+            font-size: 0.8rem;
+            line-height: 2.5;
+            margin-left: 10px;
+        }
     }
 }
 
@@ -97,4 +213,4 @@
     @media (max-width:576px) {
         @content;
     }
-} */
+}  */

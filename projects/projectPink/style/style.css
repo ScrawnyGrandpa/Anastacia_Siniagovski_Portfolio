@@ -62,3 +62,24 @@ input[type=submit] {
     color: #FFFFFF;
     margin-top: 35px;
 }
+
+
+@media (max-width:576px) {
+    .container {
+        width: 100vw;
+        max-width: 100%;
+        background-size: 100% 230px;
+
+        .form-holder {
+            width: 90vw;
+            padding: 20px 50px;
+            top: 5%;
+            left: 5%;
+
+            input[type=text] {
+                width: 100%;
+            }
+        }
+
+    }
+}

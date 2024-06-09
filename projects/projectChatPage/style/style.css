@@ -9,6 +9,7 @@
 .container {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }
 
 .imgDiv {
@@ -40,13 +41,19 @@
     display: block;
     position: relative;
     width: 70px;
-    right: -100%;
-    top: -20%;
+    margin-left: auto;
 }
 
-.container .forme {
+.test {
+    padding-right: 64px;
+    max-width: 850px;
+}
+
+.forme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 65vw;
-    padding: 150px 100px;
     border-bottom: 15px solid #FDBD03;
 }
 
@@ -96,8 +103,7 @@ input[type=submit] {
     width: 166px;
     height: 50px;
     font: normal normal bold 22px/30px Heebo;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .sekshane {
@@ -114,14 +120,80 @@ textarea {
 }
 
 .socialMedia {
-    position: absolute;
-    right: 0;
-    bottom: -40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 30px;
 }
 
 .socialMedia>img {
     height: 70px;
-    margin-left: 20px;
     position: relative;
-    right: -20%;
+}
+
+@media (max-width:576px) {
+    .container {
+        width: 95vw;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgDiv {
+        width: 100vw;
+        height: 25vh;
+    }
+
+    .imgDiv>img {
+        object-fit: contain;
+        height: 170px;
+    }
+
+    .whatsapp {
+        display: none;
+    }
+
+    .upperLine {
+        width: 85%;
+    }
+
+    .forme {
+        width: 100vw;
+        padding: 10px 20px;
+        flex-grow: 1;
+    }
+
+    .test {
+        padding: 0;
+    }
+
+    .nameInput,
+    .emailInput {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h1,
+    p {
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    input[type=submit] {
+        width: 100vw;
+    }
+
+    .socialMedia {
+        justify-content: center;
+        padding-bottom: 26px;
+    }
+
+    .socialMedia>img {
+        height: 46px;
+    }
 }
