@@ -85,14 +85,18 @@ form {
         width: 100vw;
         padding: 0px 30px;
 
-
         h1 {
-            font-size: 5rem;
-            margin-top: -50px;
+            font-size: 3.5rem;
+            margin: 0 auto;
+            line-height: 1.25;
+            margin-bottom: 20px;
         }
 
         h3 {
             font-size: 1.5rem;
+            margin: 0 auto;
+            line-height: 1.25;
+            margin-bottom: 20px;
         }
 
         form {
