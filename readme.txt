@@ -28,11 +28,11 @@ The folder stracture:
 		c. style (contains mainProjectPage css + scss files)
 		d. projectPageChat.html
 		e. projectPageCoffee.html
-		f.  projectPageCubes.html
+		f. projectPageCubes.html
 		g. projectPageNight.html
 		h. projectPageOcean.html
-		i.  projectPagePink.html
-		j.  projectPageTemplate.html
+		i. projectPagePink.html
+		j. projectPageTemplate.html
 
 	    2. projectChatPage (Consultation Landing Page)
 		a. images
@@ -76,4 +76,4 @@ The folder stracture:
 	D. style
 	E. index.html (main portfolio page)
 	F. readme.txt (the file you are currently viewing)
-	G. resume_317261147_1.pdf (hebrew version of my resume - will be updated in future versions)
+	G. resume_317261147_1.pdf (currently only hebrew version of my resume. An english version will be added in the future.)
