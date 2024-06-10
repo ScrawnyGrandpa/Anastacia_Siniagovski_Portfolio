@@ -9,8 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  max-width: 100%;
+}
+
 .container {
-  width: 1315px;
+  width: 90vw;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -94,6 +99,7 @@ section {
   background-color: rgb(34, 34, 34);
   background-image: url(../images/abstractB.png);
   background-size: cover;
+  max-width: 100%;
 }
 section h1 {
   font-size: 3.8rem;
@@ -103,7 +109,7 @@ section h1 {
   font-weight: 400;
 }
 section p {
-  margin: 20px 250px;
+  margin: 20px 20px;
   text-align: center;
   color: black;
   font-weight: 600;
@@ -190,16 +196,17 @@ section a:hover {
 
 /* ABOUT ME SECTION */
 #mainProjectImg {
-  height: 1015px;
-  padding-top: 150px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 150px 0;
   background-color: #ffffff;
   box-shadow: inset 0px 10px 10px -3px rgba(0, 0, 0, 0.2392156863);
 }
 #mainProjectImg img {
-  height: 718px;
-  width: 1189px;
+  width: 90vw;
+  height: auto;
   display: block;
-  margin: 0 auto;
+  margin: auto auto;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2392156863);
 }
 
@@ -233,6 +240,17 @@ section a:hover {
   margin-right: 10px;
 }
 
+@media (max-width: 992px) {
+  #mainProjectImg {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px 0;
+  }
+  #mainProjectImg img {
+    width: 90vw;
+    height: auto;
+  }
+}
 /* Tablet */
 @media (max-width: 768px) {
   .container {
@@ -246,6 +264,10 @@ section a:hover {
     margin: 0 15px;
     line-height: 2.2;
   }
+  #projectPageHome {
+    width: 100vw;
+    max-width: 100%;
+  }
   #mainProjectImg {
     height: -moz-fit-content;
     height: fit-content;
@@ -253,7 +275,7 @@ section a:hover {
   }
   #mainProjectImg img {
     width: 90vw;
-    height: 30vh;
+    height: auto;
   }
 }
 /* Mobile */
@@ -351,7 +373,7 @@ section a:hover {
   }
   #mainProjectImg img {
     width: 90vw;
-    height: 30vh;
+    height: auto;
   }
   /* RR section */
   .rr {

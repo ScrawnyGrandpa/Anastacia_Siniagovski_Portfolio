@@ -54,16 +54,19 @@
         margin: 20px 35px;
     }
 
-    nav {
-        ul {
-            li {
-                a {
-                    margin: 0 15px;
-                    line-height: 2.2;
+    header {
+        nav {
+            padding: 0 0;
+
+            ul {
+                li {
+                    a {
+                        margin: 0 15px;
+                        line-height: 2.2;
+                    }
                 }
             }
         }
-
     }
 
     #aboutme {
@@ -80,24 +83,21 @@
             align-items: center;
             flex-direction: column;
 
-            .galleryItem {
-                width: 70vw;
-
-                .galleryItem>img {
-                    object-fit: cover;
-                }
+            .textP {
+                margin: 20px 35px;
             }
         }
 
-        .textP {
-            margin: 20px 35px;
-        }
-    }
+        #contact {
+            h2 {
+                font-size: 2rem;
+            }
 
-    #contact {
-        .contactPanel {
-            margin: auto;
-            width: 70%;
+            .contactPanel {
+                margin: auto;
+                width: 70%;
+
+            }
         }
     }
 }
@@ -173,11 +173,13 @@
 
     .container2>h1 {
         text-shadow: 2px 2px 5px rgb(255, 255, 255);
+        margin-top: -50px;
+        font-size: 3rem;
     }
 
     .textP {
         font-weight: 500;
-        margin: 10px 15px;
+        margin: 10px 25px;
         text-align: justify;
     }
 
@@ -193,6 +195,10 @@
     #aboutme {
         height: fit-content;
 
+        h2 {
+            font-size: 3rem;
+        }
+
         p {
             margin: 10px 15px;
             text-align: justify;
@@ -202,6 +208,10 @@
 
     /* Gallery Section */
     #workGallery {
+        h2 {
+            font-size: 3rem;
+        }
+
         p {
             margin: 10px 15px;
             text-align: justify;
@@ -237,7 +247,7 @@
             border: 5px solid rgba(21, 208, 241, 0.486);
 
             h2 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             h2,
@@ -276,22 +286,3 @@
         }
     }
 }
-
-
-/* @mixin desktop {
-    @media (max-width:992px) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (max-width:768px) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width:576px) {
-        @content;
-    }
-}  */

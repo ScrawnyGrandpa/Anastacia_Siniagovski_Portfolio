@@ -473,7 +473,10 @@ footer .footeritem p {
   .textP {
     margin: 20px 35px;
   }
-  nav ul li a {
+  header nav {
+    padding: 0 0;
+  }
+  header nav ul li a {
     margin: 0 15px;
     line-height: 2.2;
   }
@@ -489,17 +492,13 @@ footer .footeritem p {
     align-items: center;
     flex-direction: column;
   }
-  #workGallery .galleryFlex .galleryItem {
-    width: 70vw;
-  }
-  #workGallery .galleryFlex .galleryItem .galleryItem > img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  #workGallery .textP {
+  #workGallery .galleryFlex .textP {
     margin: 20px 35px;
   }
-  #contact .contactPanel {
+  #workGallery #contact h2 {
+    font-size: 2rem;
+  }
+  #workGallery #contact .contactPanel {
     margin: auto;
     width: 70%;
   }
@@ -563,10 +562,12 @@ footer .footeritem p {
   }
   .container2 > h1 {
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    margin-top: -50px;
+    font-size: 3rem;
   }
   .textP {
     font-weight: 500;
-    margin: 10px 15px;
+    margin: 10px 25px;
     text-align: justify;
   }
   /* Coding Languages Icons */
@@ -579,11 +580,17 @@ footer .footeritem p {
     height: -moz-fit-content;
     height: fit-content;
   }
+  #aboutme h2 {
+    font-size: 3rem;
+  }
   #aboutme p {
     margin: 10px 15px;
     text-align: justify;
   }
   /* Gallery Section */
+  #workGallery h2 {
+    font-size: 3rem;
+  }
   #workGallery p {
     margin: 10px 15px;
     text-align: justify;
@@ -611,7 +618,7 @@ footer .footeritem p {
     border: 5px solid rgba(21, 208, 241, 0.486);
   }
   #contact .contactPanel h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   #contact .contactPanel h2,
   #contact .contactPanel p,
@@ -639,21 +646,4 @@ footer .footeritem p {
     line-height: 2.5;
     margin-left: 10px;
   }
-}
-/* @mixin desktop {
-    @media (max-width:992px) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (max-width:768px) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (max-width:576px) {
-        @content;
-    }
-}  *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

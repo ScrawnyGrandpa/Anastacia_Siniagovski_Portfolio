@@ -4,6 +4,7 @@ section {
     background-color: rgb(34, 34, 34);
     background-image: url(../images/abstractB.png);
     background-size: cover;
+    max-width: 100%;
 
     h1 {
         font-size: $bigTitleSize;
@@ -14,7 +15,7 @@ section {
     }
 
     p {
-        margin: 20px 250px;
+        margin: 20px 20px;
         text-align: center;
         color: black;
         font-weight: 600;
