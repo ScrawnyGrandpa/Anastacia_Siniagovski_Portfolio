@@ -532,7 +532,7 @@ footer .footeritem p {
   }
   #navToggle:checked + #siteNav {
     display: block;
-    padding-top: 40px;
+    padding-top: 60px;
   }
   #navButton {
     position: fixed;
