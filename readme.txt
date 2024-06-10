@@ -34,44 +34,43 @@ The folder stracture:
 		i.  projectPagePink.html
 		j.  projectPageTemplate.html
 
-	    2. projectBlue (currently unavailable)
-	    3. projectChatPage (Consultation Landing Page)
+	    2. projectChatPage (Consultation Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    4. projectCoffee (Free Coffee Landing Page)
+	    3. projectCoffee (Free Coffee Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    5. projectCubes (Travel Landing Page)
+	    4. projectCubes (Travel Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    6. projectNight (Lead Forward dark-blue Landing Page)
+	    5. projectNight (Lead Forward dark-blue Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    7. projectOcean (Here & Now Landing Page)
+	    6. projectOcean (Here & Now Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    8. projectPink (Lead Forward pink Landing Page)
+	    7. projectPink (Lead Forward pink Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    9. Zip Files of all Projects
+	    8. Zip Files of all Projects
 
 	C. script (currently empty)
 	D. style

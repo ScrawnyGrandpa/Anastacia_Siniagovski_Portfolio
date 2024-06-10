@@ -20,8 +20,9 @@
 
 /* ABOUT ME SECTION */
 #aboutme {
-    height: 850px;
-    padding-top: 100px;
+    height: fit-content;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: $bgcExtraLight;
     box-shadow: inset 0px 10px 10px -3px #0000003d;
 
@@ -70,7 +71,7 @@
 
 /* PROJECT GALLERY SECTION */
 #workGallery {
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 150px;
     background-color: $bgcExtraLight;
 
@@ -90,6 +91,7 @@
     .galleryFlex {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .galleryItem {
@@ -200,6 +202,7 @@ form {
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.356);
         font-size: $fontSize;
+        padding-left: 10px;
     }
 
     textarea {
@@ -211,6 +214,8 @@ form {
         border-radius: 10px;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.356);
+        padding-left: 10px;
+        padding-top: 5px;
     }
 
     input[type=submit] {
@@ -226,6 +231,7 @@ form {
         border: 0;
         color: black;
         box-shadow: 0 2px 2px 2px rgba(1, 25, 41, 0.377);
+        cursor: pointer;
 
         &:hover {
             background-color: cyan;
