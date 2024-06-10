@@ -1,25 +1,106 @@
 /* RESPONSIVE ADJUSTMENTTS SECTION */
-@media (max-width:1200px) {}
+
 
 /* Large (standard) Desktop screen */
 @media (max-width:992px) {
     .container {
-        width: 90vw;
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    .textP {
+        margin: 20px 35px;
+    }
+
+    #aboutme {
+        .textP {
+            margin: 20px 35px;
+        }
+    }
+
+    #workGallery {
+        .galleryFlex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .galleryItem {
+                margin: 20px auto;
+            }
+        }
+
+        .textP {
+            margin: 20px 35px;
+        }
+    }
+
+    #contact {
+        .contactPanel {
+            margin: auto;
+            width: 70%;
+        }
     }
 }
+
 
 
 /* Tablet */
 @media (max-width:768px) {
     .container {
-        width: 95vw;
+        width: 100vw;
+        max-width: 100%;
     }
 
-    nav h3 {
-        display: none;
+    .textP {
+        margin: 20px 35px;
+    }
+
+    nav {
+        ul {
+            li {
+                a {
+                    margin: 0 15px;
+                    line-height: 2.2;
+                }
+            }
+        }
+
+    }
+
+    #aboutme {
+        height: fit-content;
+
+        .textP {
+            margin: 20px 35px;
+        }
+    }
+
+    #workGallery {
+        .galleryFlex {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .galleryItem {
+                width: 70vw;
+
+                .galleryItem>img {
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .textP {
+            margin: 20px 35px;
+        }
+    }
+
+    #contact {
+        .contactPanel {
+            margin: auto;
+            width: 70%;
+        }
     }
 }
-
 
 /* Mobile */
 @media (max-width:576px) {
@@ -46,10 +127,6 @@
         display: none;
     }
 
-    /*     #siteNav ul {
-        list-style-type: none;
-    } */
-
     #navToggle:checked+#siteNav {
         display: block;
         padding-top: 40px;
@@ -70,7 +147,6 @@
     nav ul li {
         width: 100vw;
         max-width: 100%;
-        /* background-color: $bgcDark; */
         backdrop-filter: blur(10px);
         background-color: rgba(0, 0, 0, 0.329);
         clear: both;
@@ -131,16 +207,19 @@
             text-align: justify;
         }
 
-        .galleryItem {
-            width: 90vw;
-            height: auto;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0px 5px 20px 3px #00000030;
-            border-radius: 15px;
+        .galleryFlex {
+            .galleryItem {
+                width: 85vw;
+                height: auto;
+                margin: 20px;
+                background-color: white;
+                box-shadow: 0px 5px 20px 3px #00000030;
+                border-radius: 15px;
 
-            img[src$='_page.png'] {
-                width: 90vw;
+                img[src$='_page.png'] {
+                    width: 85vw;
+                    height: fit-content;
+                }
             }
         }
     }
@@ -151,28 +230,30 @@
         background-position-x: center;
     }
 
-    .contactPanel {
-        margin: 0 auto;
-        width: 95vw;
-        border: 5px solid rgba(21, 208, 241, 0.486);
+    #contact {
+        .contactPanel {
+            margin: 0 auto;
+            width: 95vw;
+            border: 5px solid rgba(21, 208, 241, 0.486);
 
-        h2 {
-            font-size: 2.5rem;
-        }
+            h2 {
+                font-size: 2.5rem;
+            }
 
-        h2,
-        p,
-        label,
-        input,
-        textarea {
-            font-weight: 300;
-            width: 95%;
-            color: white;
-        }
+            h2,
+            p,
+            label,
+            input,
+            textarea {
+                font-weight: 300;
+                width: 95%;
+                color: white;
+            }
 
-        input[type=submit] {
-            width: 95%;
-            color: white;
+            input[type=submit] {
+                width: 95%;
+                color: white;
+            }
         }
     }
 

@@ -1,3 +1,39 @@
+/* Tablet */
+@media (max-width:768px) {
+    .container {
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    .textP {
+        margin: 20px 35px;
+    }
+
+    nav {
+        ul {
+            li {
+                a {
+                    margin: 0 15px;
+                    line-height: 2.2;
+                }
+            }
+        }
+
+    }
+
+    #mainProjectImg {
+        height: fit-content;
+        padding: 50px 0;
+
+        img {
+            width: 90vw;
+            height: 30vh;
+        }
+    }
+}
+
+
+/* Mobile */
 @media (max-width:576px) {
 
     /* NAV BAR */

@@ -137,4 +137,8 @@ textarea {
         grid-row: 7/10;
         grid-column: 1/3;
     }
+
+    /*  img {
+        height: fit-content;
+    } */
 }

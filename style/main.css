@@ -209,7 +209,7 @@ section p {
 
 /* PROJECT GALLERY SECTION */
 #workGallery {
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 150px;
   background-color: #ffffff;
 }
@@ -303,7 +303,8 @@ section p {
   padding-bottom: 160px;
 }
 #contact p,
-#contact label {
+#contact label,
+#contact textarea {
   font-size: 1.3rem;
   font-family: "REM";
 }
@@ -322,6 +323,7 @@ form input {
   border-bottom: 3px solid rgb(0, 145, 145);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.356);
+  font-size: 1.3rem;
 }
 form textarea {
   border: 0;
@@ -357,9 +359,10 @@ form input[type=submit]:hover {
   background-color: rgba(23, 100, 87, 0.226);
   border: 5px solid rgba(4, 81, 197, 0.349);
   /*     border-image: linear-gradient(45deg, purple, orange) 1; */
-  width: 600px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  width: 600px;
+  margin-left: 5%;
 }
 .contactPanel h2,
 .contactPanel p {
@@ -437,16 +440,68 @@ footer .footeritem p {
 /* Large (standard) Desktop screen */
 @media (max-width: 992px) {
   .container {
-    width: 90vw;
+    width: 100vw;
+    max-width: 100%;
+  }
+  .textP {
+    margin: 20px 35px;
+  }
+  #aboutme .textP {
+    margin: 20px 35px;
+  }
+  #workGallery .galleryFlex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #workGallery .galleryFlex .galleryItem {
+    margin: 20px auto;
+  }
+  #workGallery .textP {
+    margin: 20px 35px;
+  }
+  #contact .contactPanel {
+    margin: auto;
+    width: 70%;
   }
 }
 /* Tablet */
 @media (max-width: 768px) {
   .container {
-    width: 95vw;
+    width: 100vw;
+    max-width: 100%;
   }
-  nav h3 {
-    display: none;
+  .textP {
+    margin: 20px 35px;
+  }
+  nav ul li a {
+    margin: 0 15px;
+    line-height: 2.2;
+  }
+  #aboutme {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #aboutme .textP {
+    margin: 20px 35px;
+  }
+  #workGallery .galleryFlex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #workGallery .galleryFlex .galleryItem {
+    width: 70vw;
+  }
+  #workGallery .galleryFlex .galleryItem .galleryItem > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #workGallery .textP {
+    margin: 20px 35px;
+  }
+  #contact .contactPanel {
+    margin: auto;
+    width: 70%;
   }
 }
 /* Mobile */
@@ -468,9 +523,6 @@ footer .footeritem p {
   #siteNav {
     display: none;
   }
-  /*     #siteNav ul {
-      list-style-type: none;
-  } */
   #navToggle:checked + #siteNav {
     display: block;
     padding-top: 40px;
@@ -489,7 +541,6 @@ footer .footeritem p {
   nav ul li {
     width: 100vw;
     max-width: 100%;
-    /* background-color: $bgcDark; */
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.329);
@@ -537,39 +588,41 @@ footer .footeritem p {
     margin: 10px 15px;
     text-align: justify;
   }
-  #workGallery .galleryItem {
-    width: 90vw;
+  #workGallery .galleryFlex .galleryItem {
+    width: 85vw;
     height: auto;
     margin: 20px;
     background-color: white;
     box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.1882352941);
     border-radius: 15px;
   }
-  #workGallery .galleryItem img[src$="_page.png"] {
-    width: 90vw;
+  #workGallery .galleryFlex .galleryItem img[src$="_page.png"] {
+    width: 85vw;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   /* Contact Me Section */
   .contact {
     background-position-x: center;
   }
-  .contactPanel {
+  #contact .contactPanel {
     margin: 0 auto;
     width: 95vw;
     border: 5px solid rgba(21, 208, 241, 0.486);
   }
-  .contactPanel h2 {
+  #contact .contactPanel h2 {
     font-size: 2.5rem;
   }
-  .contactPanel h2,
-  .contactPanel p,
-  .contactPanel label,
-  .contactPanel input,
-  .contactPanel textarea {
+  #contact .contactPanel h2,
+  #contact .contactPanel p,
+  #contact .contactPanel label,
+  #contact .contactPanel input,
+  #contact .contactPanel textarea {
     font-weight: 300;
     width: 95%;
     color: white;
   }
-  .contactPanel input[type=submit] {
+  #contact .contactPanel input[type=submit] {
     width: 95%;
     color: white;
   }
