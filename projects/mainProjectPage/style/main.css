@@ -260,7 +260,10 @@ section a:hover {
   .textP {
     margin: 20px 35px;
   }
-  nav ul li a {
+  header nav {
+    padding: 0 0;
+  }
+  header nav ul li a {
     margin: 0 15px;
     line-height: 2.2;
   }
