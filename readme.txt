@@ -29,10 +29,12 @@ The folder stracture:
 		d. projectPageChat.html
 		e. projectPageCoffee.html
 		f. projectPageCubes.html
-		g. projectPageNight.html
-		h. projectPageOcean.html
-		i. projectPagePink.html
-		j. projectPageTemplate.html
+		g. projectPageNewAI.html
+		h. projectPageNight.html
+		i. projectPageOcean.html
+		j. projectPagePink.html
+		k. projectPageTemplate.html
+		l. projectPageWinderRun.html
 
 	    2. projectChatPage (Consultation Landing Page)
 		a. images
@@ -52,7 +54,7 @@ The folder stracture:
 		c. style
 		d. index.html
 
-	    5. projectNewAI (NEW-AI Landing Page)
+	    5. projectNewAI (NEW-AI Landing Page) - bonus page
 		a. images
 		b. script (css + scss files)
 		c. style
@@ -76,7 +78,8 @@ The folder stracture:
 		c. style
 		d. index.html
 
-	    9. Zip Files of all Projects
+	    9. projectWinterRun (Winter Themed Landing Page) - bonus page
+	    10. Zip Files of all Projects
 
 	C. script (currently empty)
 	D. style
