@@ -172,6 +172,7 @@ body {
     justify-content: center;
     align-content: center;
     gap: 5px;
+    margin-bottom: 3%;
   }
   .hiddenDiv img {
     width: 47%;
