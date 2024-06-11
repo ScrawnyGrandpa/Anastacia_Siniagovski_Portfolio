@@ -52,25 +52,31 @@ The folder stracture:
 		c. style
 		d. index.html
 
-	    5. projectNight (Lead Forward dark-blue Landing Page)
+	    5. projectNewAI (NEW-AI Landing Page)
+		a. images
+		b. script (css + scss files)
+		c. style
+		d. index.html
+
+	    6. projectNight (Lead Forward dark-blue Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    6. projectOcean (Here & Now Landing Page)
+	    7. projectOcean (Here & Now Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    7. projectPink (Lead Forward pink Landing Page)
+	    8. projectPink (Lead Forward pink Landing Page)
 		a. images
 		b. script
 		c. style
 		d. index.html
 
-	    8. Zip Files of all Projects
+	    9. Zip Files of all Projects
 
 	C. script (currently empty)
 	D. style
