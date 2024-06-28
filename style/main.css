@@ -366,7 +366,6 @@ form input[type=submit]:hover {
   border-radius: 15px;
   background-color: rgba(23, 100, 87, 0.226);
   border: 5px solid rgba(4, 81, 197, 0.349);
-  /*     border-image: linear-gradient(45deg, purple, orange) 1; */
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   width: 600px;
@@ -401,6 +400,13 @@ footer .socialMedia {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 125px;
+}
+footer .socialMedia a {
+  text-decoration: none;
+  color: black;
+}
+footer .socialMedia a a:visited {
+  color: black;
 }
 footer img {
   height: 41px;

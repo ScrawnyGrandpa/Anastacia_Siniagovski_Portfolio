@@ -12,6 +12,15 @@ footer {
         justify-content: space-evenly;
         flex-wrap: wrap;
         height: 125px;
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            a:visited {
+                color: black;
+            }
+        }
     }
 
     img {

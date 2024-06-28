@@ -1,9 +1,7 @@
 :root {
     --bs-body-color: #011560;
     --bs-border-color: #D3E10E;
-    /* --bs-primary-hex: #D3E10E */
     --bs-primary-rgb: 211, 225, 14;
-    /* --bs-light-hex: #F6F6F6 */
     --bs-light-rgb: 246, 246, 246;
 }
 
