@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        p {
+            width: 50px;
+            height: 30px;
+            background-color: #e2ebf3;
+            text-align: center;
+            font-size: 1rem;
+            font-family: cursive;
+            line-height: 1.8;
+        }
+
+        button {
+            width: 50px;
+            height: 20px;
+            background-color: rgb(175, 198, 222);
+            color: black;
+            border: 0;
+            cursor: pointer;
+        }
+
+        select {
+            width: 50px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="counterValue">0</p>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="reset">RESET</button>
+    <select name="options" id="selectNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <script>
+        const counterValue = document.getElementById('counterValue');
+        let previousData = localStorage.getItem("Sum");
+        let storedValue = localStorage.getItem("storedValue");
+        let optionValue = document.getElementById('selectNum');
+        let sum = 0;
+
+        function loadPage() {
+            if (previousData) {
+                sum = previousData;
+                counterValue.innerText = sum;
+            }
+            if (storedValue) {
+                optionValue.value = storedValue;
+            }
+        };
+        loadPage();
+
+        optionValue.addEventListener('change', () => localStorage.setItem("storedValue", optionValue.value));
+
+        document.getElementById('increment').addEventListener('click', () => {
+            /* for some reason I had an issue with the optionValue variable when it was global and JS would simply... forget it after the first selection. It works fine when it is inside the click function as its own let variable. */
+            let optionValue = +document.getElementById('selectNum').value;
+            switch (optionValue) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                    sum = Number(counterValue.innerText) + optionValue;
+                    counterValue.innerText = sum;
+                    localStorage.setItem("Sum", sum);
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        document.getElementById('decrement').addEventListener('click', () => {
+            let optionValue = +document.getElementById('selectNum').value;
+            switch (optionValue) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                    sum = Number(counterValue.innerText) - optionValue;
+                    counterValue.innerText = sum;
+                    localStorage.setItem("Sum", sum);
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        document.getElementById('reset').addEventListener('click', () => {
+            localStorage.removeItem("Sum");
+            localStorage.removeItem("storedValue");
+            sum = 0;
+            counterValue.innerText = "";
+            optionValue.value = null;
+        });
+    </script>
+</body>
+
+</html>

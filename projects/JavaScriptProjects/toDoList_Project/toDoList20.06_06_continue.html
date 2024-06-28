@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-DO List</title>
+    <style>
+        label {
+            margin: 10px;
+            font-family: arial;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        #list {
+            font-family: arial;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
+        input {
+            margin: 10px;
+            height: 25px;
+            width: 200px;
+        }
+
+        input[type=checkbox] {
+            width: 15px;
+        }
+
+        button {
+            height: 30px;
+            width: 75px;
+            font-family: arial;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 2px solid black;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <label>TO-DO LIST</label>
+    <br>
+    <input type="text" id="userInput">
+    <button id="addBtn">ADD</button>
+    <button id="resetBtn">RESET</button>
+    <ul id="list"></ul>
+
+    <script>
+        const userInput = document.getElementById('userInput');
+        const listDiv = document.getElementById('list');
+        const btn = document.getElementById('addBtn');
+        const reset = document.getElementById('resetBtn');
+        let storedList = localStorage.getItem("StoredList");
+        let userList = [];
+
+        // Check if we already had a list while loading the page. And load it.
+        function loadList() {
+            if (storedList != null) {
+                userList = JSON.parse(storedList);
+                userList.forEach((item, index) => {
+                    // create a function that adds a list of items with a checkbox. 
+                    createListItem(item, index);
+                });
+            }
+        }
+        loadList();
+
+        // Function to create a new list item
+        function createListItem(item, index) {
+            const listItem = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.onchange = () => crossOut(index);
+
+            const label = document.createElement('label');
+            label.textContent = item;
+
+            listItem.appendChild(checkbox);
+            listItem.appendChild(label);
+
+            listDiv.appendChild(listItem);
+        }
+
+        // Listen to the ADD button and run the saveToList function when clicked.
+        btn.addEventListener('click', saveToList);
+
+        // Save to the Array and save to local storage.
+        function saveToList() {
+            let items = String(userInput.value);
+            if (items) {
+                userList.push(items);
+                userInput.value = "";
+                storedList = localStorage.setItem("StoredList", JSON.stringify(userList));
+                createListItem(items, userList.length - 1); // Create new list item
+            } else {
+                alert("Please enter an item to add to the list");
+            }
+        }
+
+        function crossOut(index) {
+            const listItem = listDiv.children[index];
+            listItem.classList.toggle('completed');
+
+            // Update localStorage with the modified list
+            userList[index].completed = !userList[index].completed;
+            localStorage.setItem("StoredList", JSON.stringify(userList));
+        }
+
+        // Reset list and storage key.
+        reset.addEventListener('click', () => {
+            localStorage.removeItem("StoredList");
+            storedList = null;
+            userList = [];
+            listDiv.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>

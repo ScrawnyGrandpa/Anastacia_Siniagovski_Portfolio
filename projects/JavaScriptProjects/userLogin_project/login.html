@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <input type="text" id="usernameInput" placeholder="Username" required />
+      <input type="password" id="passwordInput" placeholder="Password" required />
+      <button type="button" id="loginButton">Log In</button>
+    </form>
+  </div>
+
+  <script>
+    console.log("Loaded at " + new Date());
+
+
+    document.getElementById('loginButton').addEventListener('click', () => {
+      let userNameInput = document.getElementById('usernameInput').value;
+      let passwordInput = document.getElementById('passwordInput').value;
+      let storedUsers = JSON.parse(localStorage.getItem("UsersInfo")) || [];
+
+      let userLogIn = storedUsers.find(user => user.username == userNameInput && user.password == passwordInput);
+
+      if (userLogIn) {
+        // Use the login info we found of that user, then request the logged date to be updated.
+        userLogIn.lastlogged = new Date().toLocaleString();
+        // Save the updated logged date back into the storedUsers.
+        localStorage.setItem("UsersInfo", JSON.stringify(storedUsers));
+        // Save the currently logged user info based on fetching the info from the userLogIn match.
+        let currentUser = localStorage.setItem("CurrentlyLogged", JSON.stringify(userLogIn));
+
+        if (userLogIn.isAdmin) {
+          location.href = "./adminCrm.html"
+        } else {
+          location.href = "./index.html"
+        }
+      } else {
+        alert("Wrong username or password");
+      }
+    });
+  </script>
+</body>
+
+</html>
