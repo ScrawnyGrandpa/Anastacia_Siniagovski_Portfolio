@@ -4,12 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <script src="currencyConverter.js"></script>
+    <div class="converter">
+        <h1>Currency Converter</h1>
+        <div class="input-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount...">
+        </div>
+        <div class="flexDiv">
+            <div class="input-group selector">
+                <label for="from">From:</label>
+                <select id="from">
+                    <!--<option value="option slot">option slot</option>-->
+                </select>
+            </div>
+            <div class="input-group selector">
+                <label for="to">To:</label>
+                <select id="to">
+                    <!--<option value="option slot">option slot</option>-->
+                </select>
+            </div>
+        </div>
+        <button class="convert-button" id="convertBtn">Convert</button>
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <script src="currencies.js"></script>
 </body>
 
 </html>
