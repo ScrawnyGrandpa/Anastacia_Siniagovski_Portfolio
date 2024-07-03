@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oron</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(178, 221, 221);
+            justify-content: center;
+            border: 2px solid purple;
+        }
+
+        #box {
+            width: 400px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            margin-top: 70px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin: 5px 10px;
+        }
+
+        input[type=number] {
+            width: 15%;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        p {
+            margin: 0 5px;
+        }
+
+        #userMessage {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML Elements -->
+    <div id="container">
+        <div class="textP">
+            <h1>Solve the Problem</h1>
+        </div>
+        <div id="box">
+            <input type="number" id="result">
+            <p>=</p>
+            <p id="numText1"></p>
+            <p>+</p>
+            <p id="numText2"></p>
+        </div>
+        <div id="buttons">
+            <input type="button" value="Check result" id="btn1">
+            <input type="button" value="Reset" id="btn2">
+        </div>
+        <div id="userMessage"></div>
+    </div>
+
+
+    <!-- Script! -->
+    <script>
+        const message = document.getElementById('userMessage');
+        const numT1 = document.getElementById('numText1');
+        const numT2 = document.getElementById('numText2');
+        const btn1 = document.getElementById('btn1'); /* Check result */
+        const btn2 = document.getElementById('btn2'); /* Reset */
+        const result = document.getElementById('result');
+        let result2 = 0;
+
+        function generate() {
+            let x = Math.floor(Math.random() * 9);
+            numT1.innerHTML = x;
+            let y = Math.floor(Math.random() * 9);
+            numT2.innerHTML = y;
+            result2 = x + y;
+            console.log(result2);
+        };
+        generate();
+
+        btn1.addEventListener('click', () => {
+            if (result.value == result2) {
+                message.innerHTML = "Great Job! The answer is correct!";
+                message.style.color = 'green';
+            } else {
+                message.innerHTML = "Wrong answer! Please try again!";
+                message.style.color = 'red';
+            }
+        });
+
+        btn2.addEventListener('click', () => {
+            generate();
+            result.value = "";
+            message.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>
