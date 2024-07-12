@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="addItem">
+        <label>TO-DO LIST</label>
+        <br>
+        <input type="text" id="userInput">
+        <button id="addBtn">ADD</button>
+        <button id="resetBtn">RESET</button>
+    </div>
+    <table class="todo-table">
+        <thead>
+            <tr>
+                <td class="todo-table-header"></td>
+                <th class="todo-table-header">is Complete</th>
+                <th class="todo-table-header">Name</th>
+                <th class="todo-table-header">Created</th>
+                <th class="todo-table-header">Edit</th>
+                <th class="todo-table-header">Delete</th>
+                <th class="todo-table-header">ID</th>
+            </tr>
+        </thead>
+        <tbody id="todoListBody">
+            <!-- Items will be added here -->
+        </tbody>
+    </table>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>
