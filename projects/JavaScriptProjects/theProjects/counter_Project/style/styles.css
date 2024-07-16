@@ -18,7 +18,7 @@
         }
 
         p {
-            width: 80px;
+            width: 85%;
             height: 60px;
             background-color: #e2ebf3;
             text-align: center;
@@ -49,4 +49,10 @@
 
         .down {
             margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            button {
+                margin-top: 5px;
+            }
         }

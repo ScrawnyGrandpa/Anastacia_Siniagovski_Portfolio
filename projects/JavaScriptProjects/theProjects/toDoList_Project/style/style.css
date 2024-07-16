@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #505355;
     color: #ffffff;
     font-family: Arial, sans-serif;
     display: flex;
@@ -47,6 +47,13 @@ button {
     font-size: 1rem;
     border: 2px solid black;
 }
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
 
 .todo-table {
     width: 80%;
@@ -117,4 +124,60 @@ button {
 .completed {
     color: rgb(0, 218, 0);
     /* overide */
+}
+
+.crossed-out {
+    text-decoration: line-through;
+    color: #999999;
+    /* Optionally adjust the color */
+}
+
+@media (max-width: 768px) {
+    .addItem {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        text-align: center;
+        width: 90vw;
+        align-items: center;
+    }
+
+    .todo-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 50px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding-left: 5px;
+    }
+
+    tr {
+        display: table-row;
+    }
+
+    td,
+    th {
+        width: auto;
+
+        padding: 10px;
+        text-align: left;
+    }
+
+    .is-complete,
+    .id,
+    .created {
+        display: none;
+    }
+
+    .checkBox {
+        width: 10%;
+    }
 }

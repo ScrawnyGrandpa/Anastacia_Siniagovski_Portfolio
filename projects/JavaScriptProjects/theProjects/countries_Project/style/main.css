@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+
+}
+
 body {
     background: linear-gradient(#313045, #10a0cc);
     background-attachment: fixed;
@@ -38,7 +43,6 @@ aside {
 }
 
 ul {
-    /*list-style-type: none;*/
     margin-left: 15px;
     margin-top: 5px;
 }
@@ -56,6 +60,7 @@ thead {
     background-color: rgba(0, 0, 0, 0.507);
     backdrop-filter: blur(15px);
     height: 40px;
+    max-width: 100%;
 }
 
 th {
@@ -98,17 +103,29 @@ tr:hover {
         flex-direction: column;
     }
 
+    #search-panel {
+        z-index: 100;
+    }
+
+    #resultDiv {
+        height: 450px;
+        overflow: scroll;
+        font-size: 0.9rem;
+        width: 100vw;
+    }
+
+
+    thead {
+        top: 0;
+    }
+
+    aside:empty {
+        padding: 0px;
+    }
+
     aside {
         width: 100%;
         position: relative;
         height: fit-content;
     }
-
-    table {
-        display: block;
-        font-size: 0.9rem;
-        width: 100%;
-        max-width: 100%;
-    }
-
 }

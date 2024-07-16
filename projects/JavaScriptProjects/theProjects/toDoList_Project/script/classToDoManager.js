@@ -70,15 +70,15 @@ export default class ToDoManager {
         // Create the element
         let row = /* html */`
             <tr class="todo-item" id="row${index}">
-                <td class="todo-item-checkbox">
+                <td class="todo-item-checkbox checkBox">
                     <input type="checkbox" onchange="taskManager.toggleIsComplete('${task.id}')" ${task.complete ? "checked" : ""}>
                 </td>
-                <td class="todo-item-complete ${completeClass}">${task.complete}</td>
+                <td class="todo-item-complete is-complete ${completeClass}">${task.complete}</td>
                 <td class="todo-item-name">${task.name}</td>
-                <td class="todo-item-created">${task.creationDate}</td>
+                <td class="todo-item-created created">${task.creationDate}</td>
                 <td class="todo-item-action"><button class="todo-item-edit" onclick="taskManager.editThis('${task.id}')">Edit</button></td>
                 <td class="todo-item-action"><button class="todo-item-delete" onclick="taskManager.removeTask('${task.id}')">Delete</button></td>
-                <td class="todo-item-id">${task.id}</td>
+                <td class="todo-item-id id">${task.id}</td>
             </tr>
             `;
         // Append the child
