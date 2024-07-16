@@ -15,18 +15,15 @@ body {
     height: 100vh;
 }
 
+th {
+    font-size: 0.9rem;
+}
+
 label {
     margin: 10px;
     font-family: arial;
     font-weight: 500;
     font-size: 1.2rem;
-}
-
-#list {
-    font-family: arial;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin: 10px;
 }
 
 input {
@@ -46,12 +43,6 @@ button {
     font-weight: 500;
     font-size: 1rem;
     border: 2px solid black;
-}
-
-table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
 }
 
 
