@@ -108,7 +108,7 @@ tr:hover {
     }
 
     #resultDiv {
-        height: 450px;
+        height: 250px;
         overflow: scroll;
         font-size: 0.9rem;
         width: 100vw;

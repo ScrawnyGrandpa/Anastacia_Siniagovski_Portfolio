@@ -224,9 +224,8 @@
                 box-shadow: 0px 5px 20px 3px #00000030;
                 border-radius: 15px;
 
-                img[src$='_page.png'] {
-                    width: 85vw;
-                    height: fit-content;
+                img[src$='.png'] {
+                    width: 100%
                 }
             }
         }
