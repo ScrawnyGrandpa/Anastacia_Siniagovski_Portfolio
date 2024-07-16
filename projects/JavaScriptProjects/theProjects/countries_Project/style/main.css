@@ -89,3 +89,26 @@ tr:hover {
         font-size: 1.3rem
     }
 }
+
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        position: relative;
+        height: fit-content;
+    }
+
+    table {
+        display: block;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
