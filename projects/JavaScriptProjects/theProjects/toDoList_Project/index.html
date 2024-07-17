@@ -9,12 +9,14 @@
 </head>
 
 <body>
+
     <div class="addItem">
         <label>TO-DO LIST</label>
         <br>
         <input type="text" id="userInput" placeholder=" Add an Item to the List">
         <button id="addBtn">ADD</button>
         <button id="resetBtn">RESET</button>
+        <label style="font-size: 1rem">Please reset the list when done </label>
     </div>
     <table class="todo-table">
         <thead>
@@ -23,8 +25,7 @@
                 <th class="todo-table-header is-complete">is Complete</th>
                 <th class="todo-table-header">Name</th>
                 <th class="todo-table-header created">Created</th>
-                <th class="todo-table-header">Edit</th>
-                <th class="todo-table-header">Delete</th>
+                <th class="todo-table-header">Actions</th>
                 <th class="todo-table-header id">ID</th>
             </tr>
         </thead>

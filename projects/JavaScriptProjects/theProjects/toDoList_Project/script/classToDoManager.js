@@ -74,10 +74,10 @@ export default class ToDoManager {
                     <input type="checkbox" onchange="taskManager.toggleIsComplete('${task.id}')" ${task.complete ? "checked" : ""}>
                 </td>
                 <td class="todo-item-complete is-complete ${completeClass}">${task.complete}</td>
-                <td class="todo-item-name">${task.name}</td>
+                <td class="todo-item-name ${task.complete ? 'completed-name' : ''}">${task.name}</td>
                 <td class="todo-item-created created">${task.creationDate}</td>
-                <td class="todo-item-action"><button class="todo-item-edit" onclick="taskManager.editThis('${task.id}')">Edit</button></td>
-                <td class="todo-item-action"><button class="todo-item-delete" onclick="taskManager.removeTask('${task.id}')">Delete</button></td>
+                <td class="todo-item-action"><button class="todo-item-edit" onclick="taskManager.editThis('${task.id}')">Edit</button>
+                <button class="todo-item-delete" onclick="taskManager.removeTask('${task.id}')">Delete</button></td>
                 <td class="todo-item-id id">${task.id}</td>
             </tr>
             `;

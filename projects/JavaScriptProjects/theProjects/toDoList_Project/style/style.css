@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #505355;
+    background: linear-gradient(to bottom right, #2d0441d8, #00BCD4);
     color: #ffffff;
     font-family: Arial, sans-serif;
     display: flex;
@@ -30,6 +30,7 @@ input {
     margin: 10px;
     height: 25px;
     width: 200px;
+    padding-left: 5px;
 }
 
 input[type=checkbox] {
@@ -45,6 +46,16 @@ button {
     border: 2px solid black;
 }
 
+tr {
+    display: table-row;
+}
+
+td,
+th {
+    width: auto;
+    padding: 10px;
+    text-align: left;
+}
 
 .todo-table {
     width: 80%;
@@ -52,7 +63,8 @@ button {
     margin-top: 50px;
     border: 1px solid #333333;
     background-color: #1a1a1a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(20px);
 }
 
 .todo-table-header {
@@ -65,6 +77,7 @@ button {
 
 .todo-item {
     border-bottom: 1px solid #333333;
+    transition: background-color 0.3s ease;
 }
 
 .todo-item:hover {
@@ -92,6 +105,10 @@ button {
     color: #ffcc00;
 }
 
+.is-complete {
+    display: none;
+}
+
 .todo-item-id {
     color: #66ccff;
 }
@@ -114,13 +131,11 @@ button {
 
 .completed {
     color: rgb(0, 218, 0);
-    /* overide */
 }
 
-.crossed-out {
+.completed-name {
     text-decoration: line-through;
     color: #999999;
-    /* Optionally adjust the color */
 }
 
 @media (max-width: 768px) {
@@ -148,18 +163,6 @@ button {
     input {
         width: 100%;
         padding-left: 5px;
-    }
-
-    tr {
-        display: table-row;
-    }
-
-    td,
-    th {
-        width: auto;
-
-        padding: 10px;
-        text-align: left;
     }
 
     .is-complete,
