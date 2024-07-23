@@ -2,6 +2,7 @@
 import Player from "./player.js";
 import Invaders from "./invaders.js";
 import Projectile from "./projectile.js";
+import InvaderProjectile from "./invaderProjectile.js";
 
 // Get the canvas element by its ID
 const canvas = document.getElementById("game");
@@ -10,8 +11,10 @@ const ctx = canvas.getContext("2d");
 
 let npcs = [];
 let player = new Player();
-let beam = new Projectile();
+let playerBeam = new Projectile();
+let invaderBeam = new InvaderProjectile();
 
+let gameOver = false;
 
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
@@ -47,28 +50,70 @@ function drawPlayer() {
     ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
+// Draw both player and invader projectile.
 function drawProjectile() {
-    if (beam.active) {
-        ctx.fillStyle = beam.color;
-        ctx.fillRect(beam.x, beam.y, beam.width, beam.height);
+    if (playerBeam.active) {
+        ctx.fillStyle = playerBeam.color;
+        ctx.fillRect(playerBeam.x, playerBeam.y, playerBeam.width, playerBeam.height);
+    }
+    if (invaderBeam.active) {
+        ctx.fillStyle = invaderBeam.color;
+        ctx.fillRect(invaderBeam.x, invaderBeam.y, invaderBeam.width, invaderBeam.height);
     }
 }
+
+// Invader Projectile auto-launch every 5secs.
+function invaderProjectileLaunch() {
+    let randomInvader = Math.floor(Math.random() * npcs.length);
+    let invader = npcs[randomInvader];
+
+    if (!invaderBeam.active) {
+        invaderBeam.launch(invader);
+    }
+
+    setTimeout(invaderProjectileLaunch, 3000);
+}
+invaderProjectileLaunch();
 
 // Update canvas display
 function updateCanvas() {
     clearCanvas();
+
+    if (gameOver) {
+        // Display game over screen or victory screen
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "white";
+        ctx.font = "30px Arial";
+        if (npcs.length == 0) {
+            ctx.fillText("Game Over! You won!", canvas.width / 2 - 150, canvas.height / 2);
+        } else {
+            ctx.fillText("Game Over! You Lost!", canvas.width / 2 - 150, canvas.height / 2);
+        }
+        return;
+    }
+
     drawInvaders();
     drawPlayer();
     drawProjectile();
 
-    beam.update();
+    playerBeam.update();
     npcs.forEach((npc, i) => {
-        if (beam.isCollision(npc)) {
+        if (playerBeam.isCollision(npc)) {
             console.log("hit!");
             npcs.splice(i, 1);
-            beam.update();
+            if (npcs.length == 0) {
+                gameOver = true;
+            }
+            playerBeam.update();
         };
     });
+
+    invaderBeam.update();
+    if (invaderBeam.active && invaderBeam.isCollision(player)) {
+        console.log("Player got hit!");
+        gameOver = true;
+    }
 
     requestAnimationFrame(updateCanvas);
 }
@@ -92,10 +137,13 @@ window.addEventListener("keydown", e => {
             }
             break;
 
-        case "ArrowUp":
-            if (!beam.active) {
-                beam.launch(player.x);
+        case " ":
+            if (!playerBeam.active) {
+                playerBeam.launch(player.x);
             }
             break;
+
+        case "Enter":
+            window.document.location.reload();
     }
 });
