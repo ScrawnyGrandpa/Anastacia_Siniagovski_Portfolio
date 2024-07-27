@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oron Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <!-- HTML Elements -->
+    <div class="whole">
+        <div class="container">
+            <div class="title">Solve the Math Problem</div>
+            <div class="equation">
+                <!-- Example equation -->
+                <span id="number1"></span> <span id="operator"></span> <span id="number2"></span> =
+            </div>
+            <div class="input-container">
+                <input type="text" id="answer" placeholder="Enter your answer">
+            </div>
+            <p id="userMessage"></p>
+            <p id="probCounter"></p>
+            <button id="checkBtn">Next</button>
+            <button id="resetBtn">Reset</button>
+
+        </div>
+        <div class="container2">
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <!-- Script! -->
+    <script src="./script/app.js"></script>
+</body>
+
+</html>

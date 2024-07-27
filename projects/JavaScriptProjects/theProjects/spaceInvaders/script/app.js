@@ -3,21 +3,39 @@ import Player from "./player.js";
 import Invaders from "./invaders.js";
 import Projectile from "./projectile.js";
 import InvaderProjectile from "./invaderProjectile.js";
+import Star from "./stars.js"
 
 // Get the canvas element by its ID
 const canvas = document.getElementById("game");
 // Get the 2D rendering context for the canvas
 const ctx = canvas.getContext("2d");
 
-let npcs = [];
-let player = new Player();
-let playerBeam = new Projectile();
-let invaderBeam = new InvaderProjectile();
 
+const player = new Player();
+const playerBeam = new Projectile();
+const invaderBeam = new InvaderProjectile();
+const numStars = 70;
+let npcs = [];
+let stars = [];
 let gameOver = false;
 
 function clearCanvas() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+}
+
+// Create stars
+for (let i = 0; i < numStars; i++) {
+    stars.push(new Star(canvas.width, canvas.height));
+}
+
+function setBackgroundColor() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // draw stars
+    stars.forEach(star => {
+        star.update();
+        star.draw(ctx);
+    });
 }
 
 // Create invaders
@@ -36,7 +54,7 @@ function createInvaders() {
 }
 createInvaders();
 
-// Drawthe invaders on Canvas
+// Draw the invaders
 function drawInvaders() {
     npcs.forEach((invader) => {
         ctx.fillStyle = invader.color;
@@ -78,6 +96,7 @@ invaderProjectileLaunch();
 // Update canvas display
 function updateCanvas() {
     clearCanvas();
+    setBackgroundColor();
 
     if (gameOver) {
         // Display game over screen or victory screen
@@ -137,12 +156,14 @@ window.addEventListener("keydown", e => {
             }
             break;
 
+        // Shoot
         case " ":
             if (!playerBeam.active) {
                 playerBeam.launch(player.x);
             }
             break;
 
+        // Reset Game
         case "Enter":
             window.document.location.reload();
     }

@@ -17,5 +17,18 @@ reset.addEventListener("click", () => {
     })
 })
 
+
+document.querySelector(".close").addEventListener("click", function () {
+    document.getElementById("gamePopUp").style.display = "none";
+    window.location.reload();
+});
+
+window.onclick = function (event) {
+    if (event.target === document.getElementById("gamePopUp")) {
+        document.getElementById("gamePopUp").style.display = "none";
+        window.location.reload();
+    }
+}
+
 gameManager.startGame();
 startGamePage();

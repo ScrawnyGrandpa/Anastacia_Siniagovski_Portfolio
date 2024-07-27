@@ -4,7 +4,7 @@ export default class Projectile {
     width = 10;
     height = 20;
     speed = 15;
-    color = "purple";
+    color = "white";
     active = false;
 
     constructor() {

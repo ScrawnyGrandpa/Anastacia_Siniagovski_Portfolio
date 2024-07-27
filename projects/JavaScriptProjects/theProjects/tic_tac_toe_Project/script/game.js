@@ -21,13 +21,16 @@ export default class Game {
 
             setTimeout(() => {
                 let result = this.checkWin();
+                const popUp = document.getElementById("gamePopUp");
+                const message = document.getElementById("popUpMessage");
+
                 if (result === 1) {
-                    alert(`The winner is : ${this.currentPlayer === "X" ? "O" : "X"}`);
-                    window.location.reload();
+                    message.textContent = `The winner is : ${this.currentPlayer === "X" ? "O" : "X"}`;
+                    popUp.style.display = "block";
                 }
                 if (result === -1) {
-                    alert("Its a draw!");
-                    window.location.reload();
+                    message.textContent = "It's a draw!";
+                    popUp.style.display = "block";
                 }
             }, 0)
         }
@@ -46,7 +49,7 @@ export default class Game {
         const winPatterns = [
             [0, 1, 2],
             [3, 4, 5],
-            [6, 7, 7], //Rows
+            [6, 7, 8], //Rows
             [0, 3, 6],
             [1, 4, 7],
             [2, 5, 8], //Columns
@@ -62,11 +65,11 @@ export default class Game {
                 this.board[a] === this.board[c]) {
                 return 1;
             }
-            if (!this.board.includes("")) {
-                return -1;
-            }
-            return 0;
         }
+        if (!this.board.includes("")) {
+            return -1;
+        }
+        return 0;
     }
 
     resetGame() {

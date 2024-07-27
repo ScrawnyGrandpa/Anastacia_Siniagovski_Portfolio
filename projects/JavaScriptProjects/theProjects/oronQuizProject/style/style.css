@@ -1,0 +1,100 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f5863;
+}
+
+.whole {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.container2 {
+    display: none;
+}
+
+.appear {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    font-family: Roboto;
+}
+
+.title {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.equation {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #353535;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+    font-size: 1em;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .whole {
+        flex-direction: column;
+        max-height: 100vh;
+    }
+
+    .container {
+        margin-right: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
