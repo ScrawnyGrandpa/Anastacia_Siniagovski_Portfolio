@@ -14,7 +14,7 @@ The project folders are split into 2 sections. Main folder and projects folder. 
 Within them, each project cotains its corresponding images folder and style folder.
 
 HTML and CSS (landing pages):
-	The landing pages were done using vanila CSS, HTML and BOOSTRAP techniques.
+	The landing pages were done using vanila CSS, HTML, SASS and BOOSTRAP techniques.
 
 JavaScript (JS Projects):
 	The JavaScript Play Center projects are done using Vanila JavaScript with the following methods: OOP, API and LocalStorage.

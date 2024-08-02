@@ -16,7 +16,7 @@ html {
 }
 
 .textP {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "REM";
   line-height: 1.5;
 }
@@ -29,7 +29,7 @@ h3 {
 }
 
 h2 {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
 }
 
 /* NAV BAR SECTION */
@@ -65,7 +65,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-family: "REM";
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: 12px 25px;
   text-shadow: 1px 1px 2px black;
@@ -97,18 +97,19 @@ section {
   background-size: cover;
 }
 section h1 {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   text-align: center;
   padding-top: 110px;
   color: black;
   font-weight: 400;
 }
 section p {
+  font-size: 1.3rem !important;
   margin: 20px 150px;
   text-align: center;
   color: black;
   font-weight: 600;
-  text-shadow: 1px 1px 5px white;
+  text-shadow: 1px 1px 15px white;
 }
 
 /* ANIMATION */
@@ -196,12 +197,12 @@ section p {
   text-align: center;
   height: 50px;
   width: 200px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   background-color: #069c95;
   margin: 50px auto;
   font-family: "REM";
-  line-height: 2.5;
+  line-height: 3;
   border-radius: 20px;
   color: white;
 }
@@ -242,35 +243,41 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 390px;
+  width: 320px;
   height: auto;
-  margin: 20px;
+  margin: 10px;
   background-color: white;
   box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.1882352941);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 #workGallery .galleryItem img {
-  width: 390px;
-  height: 224px;
+  width: 316px;
+  height: 150%;
   display: block;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+#workGallery .galleryItem img[src*="Img.png"],
+#workGallery .galleryItem img[src*="page.png"] {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.281);
 }
 #workGallery .galleryItem h3 {
-  margin: 37px auto;
+  margin: 20px auto;
   font-size: 1.6rem;
   font-family: "REM";
   text-align: center;
   font-weight: 400;
 }
 #workGallery .galleryItem p {
-  text-align: center;
+  text-align: justify;
   margin: 0 auto;
   padding: 0 20px;
   color: black;
+  height: 80%;
 }
 #workGallery .galleryItem .lilicons {
   margin-top: 25px;
   display: flex;
+  justify-content: center;
 }
 #workGallery .galleryItem img[class=icons2] {
   height: 25px;
@@ -279,20 +286,20 @@ section p {
 #workGallery .galleryItem a {
   display: block;
   text-align: center;
-  height: 50px;
+  height: 35px;
   width: 200px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   background-color: #069c95;
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   font-family: "REM";
-  line-height: 2.5;
-  border-radius: 20px;
+  line-height: 2;
+  border-radius: 10px;
   color: white;
-  box-shadow: 0 2px 5px 2px rgba(1, 25, 41, 0.377);
+  box-shadow: 0 2px 2px 2px rgba(1, 25, 41, 0.397);
 }
 #workGallery .galleryItem a:hover {
   background-color: cyan;
@@ -315,7 +322,7 @@ section p {
 #contact p,
 #contact label,
 #contact textarea {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "REM";
 }
 
@@ -333,7 +340,7 @@ form input {
   border-bottom: 3px solid rgb(0, 145, 145);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.356);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-left: 10px;
 }
 form textarea {
@@ -356,7 +363,7 @@ form input[type=submit] {
   margin: 25px auto;
   width: 400px;
   height: 55px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "REM";
   border: 0;
   color: black;
@@ -444,12 +451,12 @@ footer .footeritem p {
   line-height: 2.5;
   float: left;
   margin-left: 20px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .rrsymbol {
   float: right;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: sans-serif;
   line-height: 2.5;
   float: right;
@@ -513,7 +520,7 @@ footer .footeritem p {
     flex-direction: column;
   }
   #workGallery .galleryFlex .textP {
-    margin: 20px 35px;
+    margin: 10px 10px;
   }
   #workGallery #contact h2 {
     font-size: 2rem;

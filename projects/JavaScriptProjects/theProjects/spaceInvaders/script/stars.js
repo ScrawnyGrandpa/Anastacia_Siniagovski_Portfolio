@@ -32,7 +32,6 @@ export default class Star {
     }
 
     draw(ctx) {
-
         ctx.fillStyle = this.color
         ctx.fillRect(this.x, this.y, this.size, this.size);
     }

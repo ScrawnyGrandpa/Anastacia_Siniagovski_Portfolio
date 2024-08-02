@@ -58,7 +58,7 @@
         background-color: $bgcDark;
         margin: 50px auto;
         font-family: $fontf;
-        line-height: 2.5;
+        line-height: 3;
         border-radius: 20px;
         color: white;
 
@@ -105,22 +105,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 390px;
+        width: 320px;
         height: auto;
-        margin: 20px;
+        margin: 10px;
         background-color: white;
         box-shadow: 0px 5px 20px 3px #00000030;
-        border-radius: 15px;
+        border-radius: 10px;
 
         img {
-            width: 390px;
-            height: 224px;
+            width: 316px;
+            height: 150%;
             display: block;
-            border-radius: 15px 15px 0px 0px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        img[src*="Img.png"],
+        img[src*="page.png"] {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.281);
         }
 
         h3 {
-            margin: 37px auto;
+            margin: 20px auto;
             font-size: 1.6rem;
             font-family: $fontf;
             text-align: center;
@@ -128,15 +133,17 @@
         }
 
         p {
-            text-align: center;
+            text-align: justify;
             margin: 0 auto;
             padding: 0 20px;
             color: black;
+            height: 80%;
         }
 
         .lilicons {
             margin-top: 25px;
             display: flex;
+            justify-content: center;
         }
 
         img[class="icons2"] {
@@ -147,20 +154,21 @@
         a {
             display: block;
             text-align: center;
-            height: 50px;
+            height: 35px;
             width: 200px;
             font-size: $fontSize;
             text-decoration: none;
             background-color: $bgcDark;
             margin-top: 25px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             margin-left: auto;
             margin-right: auto;
             font-family: $fontf;
-            line-height: 2.5;
-            border-radius: 20px;
+            line-height: 2;
+            border-radius: 10px;
             color: white;
-            box-shadow: 0 2px 5px 2px rgba(1, 25, 41, 0.377);
+            box-shadow: 0 2px 2px 2px rgba(1, 25, 41, 0.397);
+
 
             &:hover {
                 background-color: cyan;
