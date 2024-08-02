@@ -26,7 +26,7 @@ export class Game {
         this.snake = new Snake({ x: middle, y: middle });
         this.food = new Food(gridSize, this.snake.body);
         this.scoreDiv = scoreDiv;
-        this.savedScore = localStorage.getItem('score')
+        this.savedScore = localStorage.getItem('score');
     }
 
     start() {
@@ -63,9 +63,6 @@ export class Game {
             this.snake.grow();
             this.food.respawn(this.gridSize, this.snake.body);
             this.score += 10;
-
-
-
         }
 
         // Check for game over
@@ -77,7 +74,6 @@ export class Game {
             this.ctx.fillText("Game Over!", this.canvas.width - 280, this.canvas.height / 2);
             return;
         }
-
         this.draw();
     }
 

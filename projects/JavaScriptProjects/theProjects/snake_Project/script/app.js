@@ -11,4 +11,11 @@ document.addEventListener("keydown", (event) => {
     game.handleInput(event.key);
 });
 
-game.start();
+game.food.imageLoadPromise
+    .then(() => {
+        game.start(); // Start the game only after the image is loaded
+    })
+    .catch(error => {
+        console.error("Error initializing game:", error);
+    });
+
