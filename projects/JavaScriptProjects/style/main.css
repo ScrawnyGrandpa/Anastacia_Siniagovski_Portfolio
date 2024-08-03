@@ -360,7 +360,6 @@ section a:hover {
   section .flexContainer {
     width: 90vw;
     flex-direction: column;
-    margin-bottom: 30px;
   }
   section .flexContainer a {
     margin: 10px auto;
