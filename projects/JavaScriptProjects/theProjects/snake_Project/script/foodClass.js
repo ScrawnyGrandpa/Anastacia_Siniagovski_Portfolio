@@ -7,8 +7,7 @@ export class Food {
     img = new Image();
 
     constructor(gridSize, snakePositions) {
-/*      this.img.src = "./images/apple-whole-solid.svg";
- */     this.img.src = "./images/apple-svgrepo-com.png";
+        this.img.src = "./images/apple-svgrepo-com.png";
         this.isImageLoaded = false;
 
         this.imageLoadPromise = new Promise((resolve, reject) => {
