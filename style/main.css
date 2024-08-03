@@ -157,7 +157,8 @@ section p {
 }
 
 .codeLang {
-  height: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
 }
 .codeLang img {
