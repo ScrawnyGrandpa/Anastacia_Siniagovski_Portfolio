@@ -9,18 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  max-width: 100%;
-}
-
 .container {
-  width: 90vw;
+  width: 1315px;
   max-width: 100%;
   margin: 0 auto;
 }
 
 .textP {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "REM";
   line-height: 1.5;
 }
@@ -33,7 +29,7 @@ h3 {
 }
 
 h2 {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
 }
 
 /* NAV BAR SECTION */
@@ -69,7 +65,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-family: "REM";
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: 12px 25px;
   text-shadow: 1px 1px 2px black;
@@ -102,7 +98,7 @@ section {
   max-width: 100%;
 }
 section h1 {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   text-align: center;
   padding-top: 110px;
   color: black;
@@ -126,7 +122,7 @@ section a {
   text-align: center;
   height: 50px;
   width: 250px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   background-color: #069c95;
   margin: 50px auto;
@@ -144,7 +140,7 @@ section a:hover {
 /* ANIMATION */
 .container2 {
   position: relative;
-  overflow: hidden;
+  /*     overflow: hidden;*/
   height: 500px;
 }
 
@@ -228,12 +224,12 @@ section a:hover {
   line-height: 2.5;
   float: left;
   margin-left: 20px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .rrsymbol {
   float: right;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: sans-serif;
   line-height: 2.5;
   float: right;
@@ -261,10 +257,12 @@ section a:hover {
     margin: 20px 35px;
   }
   header nav {
-    padding: 0 0;
+    padding: 0px 0;
+  }
+  header nav img {
+    margin: 7px;
   }
   header nav ul li a {
-    margin: 0 15px;
     line-height: 2.2;
   }
   #projectPageHome {
