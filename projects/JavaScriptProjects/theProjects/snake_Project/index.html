@@ -12,11 +12,22 @@
 <body>
     <canvas id="app"></canvas>
     <div>
-        <p>Use the <strong>ARROW KEYS</strong> to control the snake.<br /><br />
-            Press <strong>ENTER</strong> to reset.
-        </p>
+        <p>Use the <strong>ARROW KEYS</strong> to control the snake.</p>
+        <p>Press <strong>ENTER</strong> to reset.</p>
+        <p>Press <strong>DELETE</strong> to reset previous games list and reload the game </p>
+
         <p id="score"><!-- Your current and best scores are written here --></p>
     </div>
+    <div class="collapsible-container">
+        <div class="collapsible-header">
+            <span class="collapsible-title">Previous Game Scores</span>
+            <span class="collapsible-arrow">&#9660;</span>
+        </div>
+        <div class="collapsible-content">
+            <p id="prevScores"></p>
+        </div>
+    </div>
+
     <script src="./script/app.js" type="module"></script>
 </body>
 

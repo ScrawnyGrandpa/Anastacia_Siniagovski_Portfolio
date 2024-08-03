@@ -17,14 +17,44 @@ canvas {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-div {
+div,
+.collapsible-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #000;
     background-color: #fff;
     width: 400px;
     margin-top: 10px;
+
 }
 
 p {
-    padding: 10px;
+    padding: 0px 10px;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+}
+
+.collapsible-title {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.collapsible-arrow {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.collapsible-content {
+    display: none;
+    background-color: #fff;
+}
+
+.collapsible-content p {
+    margin: 0;
 }

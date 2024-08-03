@@ -14,8 +14,10 @@ export class Game {
     scoreDiv;
     savedScore;
     bestScore;
+    allScores = [];
+    prevScoresDiv;
 
-    constructor(canvas, gridSize = 20, scoreDiv) {
+    constructor(canvas, gridSize = 20, scoreDiv, prevScoresDiv) {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext("2d");
         this.gridSize = gridSize;
@@ -26,7 +28,16 @@ export class Game {
         this.snake = new Snake({ x: middle, y: middle });
         this.food = new Food(gridSize, this.snake.body);
         this.scoreDiv = scoreDiv;
+
         this.savedScore = localStorage.getItem('score');
+        const storedScores = localStorage.getItem('allScores');
+        try {
+            this.allScores = storedScores ? JSON.parse(storedScores) : [];
+        } catch (e) {
+            console.error('Error parsing stored scores:', e);
+            this.allScores = [];
+        }
+        this.prevScoresDiv = prevScoresDiv
     }
 
     start() {
@@ -45,9 +56,37 @@ export class Game {
         }
     }
 
+    saveScore() {
+        const now = new Date();
+
+        // Format the date as dd/mm/yyyy
+        const day = now.getDate().toString().padStart(2, '0');
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const year = now.getFullYear();
+
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+
+        const formattedDateTime = `${day}/${month}/${year} and ended at ${hours}:${minutes}:${seconds}`;
+
+        let addScore = { score: this.score, date: formattedDateTime };
+        this.allScores.push(addScore);
+
+        localStorage.setItem('allScores', JSON.stringify(this.allScores));
+
+        this.prevScoresDiv.innerHTML = '';
+        this.allScores.forEach((game, index) => {
+            this.prevScoresDiv.innerHTML += `<strong>Game ${index + 1}:</strong><br>
+            Played on ${game.date}<br>
+            Scored: ${game.score} <br><br>`
+        });
+    }
+
     update() {
-        this.keepScore();
+
         if (this.gameOver) {
+            this.saveScore();
             if (this.intervalId) clearInterval(this.intervalId);
             console.log("Game Over!");
             return;
@@ -68,6 +107,7 @@ export class Game {
         // Check for game over
         if (this.snake.checkCollision(this.gridSize * this.gridSize)) {
             this.gameOver = true;
+            this.keepScore();
 
             this.ctx.fillStyle = "Black";
             this.ctx.font = "30px Arial";
@@ -99,6 +139,10 @@ export class Game {
                 break;
             case "Enter":
                 this.reset();
+                break;
+            case "Delete":
+                localStorage.removeItem('allScores');
+                window.location.reload();
                 break;
         }
     }

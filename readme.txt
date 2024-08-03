@@ -36,10 +36,11 @@ The folder stracture:
 				b. countries_Project Folder
 				c. currencyConverter_Project
 				d. oronQuizProject Folder
-				e. spaceInvaders Folder
-				f. tic_tac_toe_Project Folder
-				g. toDoList_Project Folder
-				h. Zip files of every project
+				e. snake_Project Folder
+				f. spaceInvaders Folder
+				g. tic_tac_toe_Project Folder
+				h. toDoList_Project Folder
+				i. Zip files of every project
 
 			 5. projectPageCounter.html
 			 6. projectPageCountries.html
