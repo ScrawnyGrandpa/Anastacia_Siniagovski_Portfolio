@@ -92,6 +92,7 @@ export class Game {
         }
 
         this.snake.move();
+        this.keepScore();
 
         // Check if food is eaten
         if (

@@ -37,8 +37,26 @@ export class Snake {
     }
 
     turn(newDirection) {
-        if (newDirection != getOpositeDirection(this.direction)) {
-            this.direction = newDirection;
+        if (newDirection !== getOpositeDirection(this.direction)) {
+            const newHead = { ...this.body[0] };
+            switch (newDirection) {
+                case Direction.Right:
+                    newHead.x += this.size;
+                    break;
+                case Direction.Left:
+                    newHead.x -= this.size;
+                    break;
+                case Direction.Up:
+                    newHead.y -= this.size;
+                    break;
+                case Direction.Down:
+                    newHead.y += this.size;
+                    break;
+            }
+
+            if (!this.body.some(segment => segment.x === newHead.x && segment.y === newHead.y)) {
+                this.direction = newDirection;
+            }
         }
     }
 
