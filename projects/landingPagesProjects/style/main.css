@@ -199,7 +199,6 @@ section a:hover {
   box-shadow: inset 0px 10px 10px -3px rgba(0, 0, 0, 0.2392156863);
 }
 #mainProjectImg img {
-  width: 90vw;
   height: auto;
   display: block;
   margin: auto auto;
